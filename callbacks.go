@@ -63,7 +63,7 @@ func formattedError(err govalidator.Error, resource interface{}) error {
 	} else if strings.Index(message, "as email") >= 0 {
 		message = fmt.Sprintf("%v is not a valid email address", attrName)
 	}
-	return NewError(resource, attrName, message)
+	return NewError(attrName, message)
 
 }
 
